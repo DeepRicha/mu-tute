@@ -1,0 +1,13 @@
+environments:
+- name: acceptance
+- name: production
+service:
+  name: extension
+  port: 80
+  healthEndpoints: /
+  pathPatterns:
+  - /*
+  pipeline:
+    source:
+      provider: GitHub
+      repo: DeepRicha/mu-tute
